@@ -7362,11 +7362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\macario.delapena\\source\\repos\\TodoApi\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\macario.delapena\\source\\repos\\APImemes\\TodoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\macario.delapena\\source\\repos\\TodoApi\\TodoApi\\TodoApi.csproj",
+      "projectPath": "C:\\Users\\macario.delapena\\source\\repos\\APImemes\\TodoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\macario.delapena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\macario.delapena\\source\\repos\\TodoApi\\TodoApi\\obj\\",
+      "outputPath": "C:\\Users\\macario.delapena\\source\\repos\\APImemes\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\macario.delapena\\AppData\\Roaming\\NuGet\\NuGet.Config",
