@@ -22,8 +22,10 @@ namespace TodoApi
         {
 
             services.AddControllers();
-            services.AddDbContext<TodoContext>(opt =>
-                                               opt.UseInMemoryDatabase("TodoList"));
+            services.AddRazorPages();
+            services.AddDbContextPool<MemeContext>(opt =>
+                                               opt.UseSqlServer(Configuration.GetConnectionString("MemesDBConnection")));
+            services.AddScoped<IMemeImageRepository, SQLMemeImagesRepository>();
 
         }
 
@@ -44,6 +46,7 @@ namespace TodoApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapRazorPages();
             });
         }
     }

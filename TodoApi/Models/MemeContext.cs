@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TodoApi.Models
 {
-    public class TodoContext : DbContext
+    public class MemeContext : DbContext
     {
-        public TodoContext(DbContextOptions<TodoContext> options)
+        public MemeContext(DbContextOptions<MemeContext> options)
             : base(options)
         {
         }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<MemeImage> MemeImages { get; set; }
     }
 }
