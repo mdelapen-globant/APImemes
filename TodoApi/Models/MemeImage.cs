@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace TodoApi.Models
 {
-    public class TodoItem
+    public class MemeImage
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsComplete { get; set; }
+        public string Path { get; set; }
+        public List<TextCoordinates> Coordinates { get; set; }
     }
 }
