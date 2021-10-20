@@ -271,12 +271,3 @@ C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\ref\Tod
 C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.pdb
 C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.genruntimeconfig.cache
 C:\Users\macario.delapena\source\repos\APImemes\TodoApi\bin\Debug\net5.0\TodoApi.Views.dll
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\bin\Debug\net5.0\TodoApi.Views.pdb
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.RazorAssemblyInfo.cache
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.RazorAssemblyInfo.cs
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.TagHelpers.input.cache
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.TagHelpers.output.cache
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.RazorCoreGenerate.cache
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.RazorTargetAssemblyInfo.cs
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.Views.pdb
-C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\Razor\Views\meme\Index.cshtml.g.cs

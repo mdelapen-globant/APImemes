@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace TodoApi
 {
-    public class ImageHandler
+    public class ImageService
     {
-
     }
 }
