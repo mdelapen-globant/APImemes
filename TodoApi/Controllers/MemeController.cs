@@ -14,9 +14,11 @@ namespace TodoApi.Controllers
     public class MemeController : ControllerBase
     {
         private readonly MemeContext _context;
-        public MemeController(MemeContext context)
+        private readonly MemeService _memeService;
+        public MemeController(MemeContext context, MemeService memeService)
         {
             _context = context;
+            _memeService = memeService;
         }
 
         // GET: api/meme
@@ -41,7 +43,6 @@ namespace TodoApi.Controllers
         }
 
         // PUT: api/meme/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMemeImage(int id, MemeImage memeImage)
         {
@@ -97,6 +98,25 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
+        [HttpPost]
+        [Route("create")]
+        public FileResult CreateMeme(int memeId, [FromBody] List<string> texts)
+        {
+            string memePath = _memeService.CreateMeme(GetMemeById(memeId), GetCoordinatesById(memeId), texts);
+            return File(memePath, "image/jpg");
+        }
+
+        private List<TextCoordinates> GetCoordinatesById(int id)
+        {
+            var meme = _context.MemeImages.Include(c => c.Coordinates).ToList();
+            return meme[id].Coordinates.ToList(); //return the coordinates for a given meme id
+        }
+
+        private MemeImage GetMemeById(int id)
+        {
+            var meme = _context.MemeImages.Find(id);
+            return meme;
+        }
         private bool MemeImageExists(int id)
         {
             return _context.MemeImages.Any(e => e.Id == id);

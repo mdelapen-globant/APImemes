@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
+using TodoApi.Models;
 
 namespace TodoApi
 {
@@ -22,10 +23,11 @@ namespace TodoApi
         {
 
             services.AddControllers();
-            services.AddRazorPages();
             services.AddDbContextPool<MemeContext>(opt =>
                                                opt.UseSqlServer(Configuration.GetConnectionString("MemesDBConnection")));
             services.AddScoped<IMemeImageRepository, SQLMemeImagesRepository>();
+            services.AddScoped<MemeService>();
+            
 
         }
 

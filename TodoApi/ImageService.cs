@@ -38,11 +38,11 @@ namespace TodoApi
         }
 
 
-        public string CreateMeme(string imagePath, string[] textColection, int[,] coordinatesCollection)
+        public string CreateMeme(string imagePath, List<string> textColection, int[,] coordinatesCollection)
         {
             Bitmap meme = RenderImage(imagePath);
 
-            for (int i = 0; i < textColection.Length; i++) //add all the text inputs to single image
+            for (int i = 0; i < textColection.Count; i++) //add all the text inputs to single image
             {
                 AddTextToImage(meme, textColection[i], coordinatesCollection[i, 0], coordinatesCollection[i, 1]);
             }

@@ -14,5 +14,6 @@ namespace TodoApi.Models
         }
 
         public DbSet<MemeImage> MemeImages { get; set; }
+        public DbSet<TextCoordinates> textCoordinates { get; set; }
     }
 }
