@@ -271,3 +271,6 @@ C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\ref\Tod
 C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.pdb
 C:\Users\macario.delapena\source\repos\APImemes\TodoApi\obj\Debug\net5.0\TodoApi.genruntimeconfig.cache
 C:\Users\macario.delapena\source\repos\APImemes\TodoApi\bin\Debug\net5.0\TodoApi.Views.dll
+C:\Users\macario.delapena\source\repos\APImemes\TodoApi\bin\Debug\net5.0\System.Drawing.Common.dll
+C:\Users\macario.delapena\source\repos\APImemes\TodoApi\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\macario.delapena\source\repos\APImemes\TodoApi\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
