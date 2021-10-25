@@ -22,9 +22,9 @@ namespace TodoApi
 
             using (Graphics graphics = Graphics.FromImage(image))
             {
-                using (Font arialFont = new Font("Arial", 10))
+                using (Font memeFont = new Font("Impact", 15))
                 {
-                    graphics.DrawString(text, arialFont, Brushes.Black, point); //add text to given image
+                    graphics.DrawString(text, memeFont, Brushes.Black, point); //add text to given image
                 }
             }
         }
@@ -32,8 +32,8 @@ namespace TodoApi
         //save image in wwwroot
         public string SaveImageInRoot(Bitmap image, string imageName)
         {
-            string path = "~/wwroot/img/created_memes/" + imageName;
-            image.Save(path);
+            string path = "C:\\Users\\macario.delapena\\source\\repos\\APImemes\\TodoApi\\wwwroot\\img\\created_memes\\" + imageName;
+            image.Save(path, System.Drawing.Imaging.ImageFormat.Jpeg);
             return path;
         }
 
@@ -46,8 +46,7 @@ namespace TodoApi
             {
                 AddTextToImage(meme, textColection[i], coordinatesCollection[i, 0], coordinatesCollection[i, 1]);
             }
-
-            return SaveImageInRoot(meme,"meme1.jpg");
+            return SaveImageInRoot(meme,"meme"+ DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".jpg");
         }
     }
 }
