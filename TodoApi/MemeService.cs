@@ -13,11 +13,19 @@ namespace TodoApi
         //receive meme image with path and text
         public string CreateMeme(MemeImage memeImage, List<TextCoordinates> coordinates, List<string> texts)
         {
-            string newMemePath = "";
-            int[,] arrayCoordinates = CoordinatesToArray(coordinates);//translate model to array
-            newMemePath = imageHandler.CreateMeme(memeImage.Path, texts, arrayCoordinates);//call image builder and concatenate text with image
+            if(isListValid(coordinates,texts))
+            {
+                string newMemePath = "";
+                int[,] arrayCoordinates = CoordinatesToArray(coordinates);//translate model to array
+                newMemePath = imageHandler.CreateMeme(memeImage.Path, texts, arrayCoordinates);//call image builder and concatenate text with image
 
-            return newMemePath;
+                return newMemePath;
+            }
+            else
+            {
+                throw new Exception("Texts do not match this meme");
+            }
+            
         }
 
         //translate model object to primitive type
@@ -34,5 +42,17 @@ namespace TodoApi
             return arrayCoordinates;
         }
 
+        //Validate given strings
+        private bool isListValid(List<TextCoordinates> coordinates, List<string> texts)
+        {
+            if(coordinates.Count == texts.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
