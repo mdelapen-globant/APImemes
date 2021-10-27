@@ -25,7 +25,7 @@ namespace TodoApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MemeImage>>> GetMemeImages()
         {
-            return await _context.MemeImages.ToListAsync();
+            return await _context.MemeImages.Include(c => c.Coordinates).ToListAsync();
         }
 
 
@@ -34,9 +34,17 @@ namespace TodoApi.Controllers
         //[Route("create")]
         public FileResult CreateMeme(int memeId, [FromBody] List<string> texts)
         {
-            string memePath = _memeService.CreateMeme(GetMemeById(memeId), GetCoordinatesById(memeId), texts);
-            var image = System.IO.File.OpenRead(memePath);
-            return File(image, "image/jpg");
+            if(MemeImageExists(memeId))
+            {
+                string memePath = _memeService.CreateMeme(GetMemeById(memeId), GetCoordinatesById(memeId), texts);
+                var image = System.IO.File.OpenRead(memePath);
+                return File(image, "image/jpg");
+            }
+            else
+            {
+                throw new Exception("Meme not found");
+            }
+            
         }
 
         private List<TextCoordinates> GetCoordinatesById(int id)
